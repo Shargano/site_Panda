@@ -1,0 +1,164 @@
+@import "vars"
+
+////    0   < xxx  <  576     ///
+@include media-breakpoint-between(xs, xs)
+	section
+		padding: 120px 0
+		.HeaderSection
+			text-align: center
+			p
+				padding: 0 5px
+				margin: 30px 0 100px 0
+	.content
+		position: relative
+		left: 0
+	.outSlideMenu
+		width: 40%
+		left: -40%
+	header
+		padding: 25px 0
+		.topLine
+			.Logotip
+				padding-left: 20px
+			#burgerButtonMnu
+				padding-right: 40px
+			#search
+				padding-right: 20px
+	#Home
+		h1
+			margin-top: 150px
+			font-size: 2.6em
+		p
+			font-size: 1.1em
+		button
+			margin: 20px 15px
+	.advantage
+		margin-bottom: 30px
+	#view
+		margin-top: 60px
+	.member
+		.carousel-item-socialButtons
+			span
+				width: 35px
+				height: 35px
+				margin: 0 7.5px
+	#Blog
+		.postPhoto
+			margin-bottom: 20px
+		.postInfo
+			display: block
+			margin: 0 auto
+			text-align: center
+			h4
+				margin: 0px 0 10px 0
+		.textOfPost
+			text-align: center
+			display: block
+			margin: 0 auto
+			width: 80%
+			margin-bottom: 40px
+////    576  < xxx < 768     ///
+@include media-breakpoint-between(sm, sm)
+	section
+		padding: 120px 0
+		.HeaderSection
+			text-align: center
+			p
+				padding: 0 5px
+				margin: 30px 0 100px 0
+	.content
+		position: relative
+		left: 0
+	.outSlideMenu
+		width: 30%
+		left: -30%
+	header
+		padding: 30px 0
+		.topLine
+			.Logotip
+				padding-left: 30px
+			#burgerButtonMnu
+				padding-right: 50px
+			#search
+				padding-right: 25px
+	#Home
+		h1
+			margin-top: 150px
+			font-size: 2.6em
+		p
+			font-size: 1.1em
+		button
+			margin: 70px 15px 70px
+	.service
+		width: 400px
+		margin: 0 auto 30px auto
+	.order
+		margin-bottom: 30px	
+	#Blog
+		.postPhoto
+			margin-bottom: 20px
+		.postInfo
+			display: block
+			margin: 0 auto
+			text-align: center
+			h4
+				margin: 0px 0 10px 0
+		.textOfPost
+			text-align: center
+			display: block
+			margin: 0 auto
+			width: 80%
+			margin-bottom: 40px
+////     768 < xxx < 992     ///
+@include media-breakpoint-between(md, md)
+	section
+		padding: 120px 0
+		.HeaderSection
+			text-align: center
+			p
+				padding: 0 50px
+				margin: 30px 0 100px 0
+	.content
+		position: relative
+		left: 0
+	header
+		padding: 35px 0
+		.topLine
+			.Logotip
+				padding-left: 40px
+			#burgerButtonMnu
+				padding-right: 60px
+			#search
+				padding-right: 30px
+	#Home
+		h1
+			margin-top: 150px
+			font-size: 3.5em
+		p
+			font-size: 1.3em
+		button
+			margin: 70px 15px 70px
+	.order
+		margin-bottom: 15px	
+	.member
+		.carousel-item-socialButtons
+			span
+				width: 35px
+				height: 35px
+				margin: 0
+	#Blog
+		.postPhoto
+			margin-bottom: 20px
+		.postInfo
+			h4
+				margin: 0px 0 10px 0
+		.textOfPost
+			width: 100%
+////     992 < xxx < 1200     ///
+@include media-breakpoint-between(lg, lg)
+	.member
+		.carousel-item-socialButtons
+			span
+				margin: 0 5px
+////       1200 < xxx        ///
+@include media-breakpoint-between(xl, xl)

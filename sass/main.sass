@@ -1,0 +1,543 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #000
+
+body
+	font-size: 1em
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $main
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.text-center
+	text-align: center
+.text-right
+	text-align: right
+b, strong
+	font-weight: bold
+a, button
+	transition: 0.6s ease
+.content
+	position: relative
+	left: 0
+	transition: 1s ease
+section
+	padding: 120px 0
+	.HeaderSection
+		text-align: center
+		h1
+			font-size: 1.875em
+			font-weight: 700
+			line-height: 1.375em
+		p
+			text-align: center
+			padding: 0 130px
+			font-size: 1em
+			line-height: 1.375em
+			margin: 30px 0 100px 0
+
+button
+	padding: 12px 30px
+	color: white
+	border: 3px solid #f8f8f8
+	background-color: transparent
+	font-family: $btn-font
+	font-size: 1.25em
+	line-height: 1.375em
+	letter-spacing: 1.1px
+	text-transform: uppercase
+	&:hover
+		cursor: pointer
+		border: 3px solid $green
+		background-color: $green
+#panda
+	width: 50px
+	height: 50px
+////////////////////Styels for outSlideMenu/////////////////
+.outSlideMenu
+	padding: 30px
+	position: fixed
+	top: 0
+	left: -25%
+	height: 100vh
+	width: 25%
+	background-color: #384459
+	transition: 1s ease
+	z-index: 10
+	.close
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 40px
+		height: 40px
+		position: absolute
+		top: 30px
+		right: 20px
+		z-index: 15
+		span
+			display: block
+			width: 30px
+			height: 3px	
+			margin: auto
+			background-color: white
+			transform: rotate(45deg)
+			&::before
+				content: ''
+				display: block
+				background-color: white
+				width: 30px
+				height: 3px
+				transform: rotate(90deg)
+	.outSlideLogo
+		margin: 10px 0 50px 0
+	.outSlideNav
+		position: relative
+		ul
+			padding: 0
+			list-style: none
+			li
+				margin-bottom: 15px
+				a
+					color: $main
+					letter-spacing: 1.5px
+					font-size: 1.1em
+					font-weight: 600
+					line-height: 22px
+					&:hover
+						text-decoration: none
+						color: $green
+	.MakerInfo
+		position: absolute
+		bottom: 30px
+		left: 30px
+		p
+			font-size: 1.1em
+			font-weight: 500
+			a
+				font-style: italic
+				text-decoration: underline
+				color: $green
+				&:hover
+					color: #01645a
+////////////////Styles for header////////////////////
+header
+	padding: 45px 0
+	position: fixed
+	width: 100%
+	top: 0
+	background-color: white
+	box-shadow: 0 0 10px rgba(0, 0, 0, .7)
+	z-index: 5
+	.topLine
+		width: 100%
+		height: 25px
+		background-color: #fff
+		.Logotip
+			font-size: 25px
+			font-weight: 700
+			line-height: 22px
+		.Navigation
+			position: relative
+			ul
+				position: relative
+				top: -13px
+				list-style: none
+				display: inline-block
+				li
+					display: inline-block
+					margin-right: 35px
+					a
+						color: $main
+						letter-spacing: 1.5px
+						font-size: 1.1em
+						font-weight: 600
+						line-height: 22px
+						&:hover
+							text-decoration: none
+							color: $green
+			#search
+				cursor: pointer
+				display: inline-block
+				svg
+					display: inline-block
+					width: 30px
+					height: 30px
+					margin: 0 30px 6px 0
+				&.activeSearch
+					background-color: black
+			#burgerButtonMnu
+				display: inline-block
+				position: absolute
+				top: -3px
+				right: 0
+				width: 30px
+				height: 30px
+				z-index: 5
+				//background-color: green// for testing
+				span
+					display: block
+					width: 30px
+					height: 4px
+					margin: 13px 0
+					background-color: $main
+					transition: 0.6s ease
+					z-index: 10
+					&::before
+						content: ''
+						display: block
+						width: 30px
+						height: 4px
+						background-color: $main
+						z-index: 10
+						transition: 0.6s ease
+						transform: translateY(-7px)
+					&::after
+						content: ''
+						display: block
+						width: 30px
+						height: 4px
+						background-color: $main
+						z-index: 10
+						transition: 0.6s ease
+						transform: translateY(3px)
+				&:hover
+					cursor: pointer
+					span, span::before, span::after
+						background-color: #00897b
+
+//////////////////Styles for Home//////////////////
+#Home
+	min-height: 100vh
+	background: rgba(0, 0, 0, .7) url('../img/Header/pexels-photo.png') center top no-repeat / cover
+	color: white
+	h1
+		margin-top: 200px
+		font-size: 3.75em
+	p
+		font-size: 1.375em
+		margin: 20px 0
+	button
+		margin: 90px 15px 90px
+	#ArrowInFirstScreen
+		display: block
+		width: 10px
+		height: 10px
+		cursor: pointer
+		font-size: 1.5em
+		font-weight: bold
+		margin: 0 auto
+		&:hover
+			color: $green
+//////////Styles for About/////////////////
+#About
+	.advantage
+		img
+			margin: 0 auto
+			max-width: 50px
+		h4
+			margin: 25px 0
+			font-size: 20px
+			font-weight: 600
+			line-height: 22px
+		p
+			margin: 0
+			width: 100%
+			font-size: 1em
+			line-height: 1.375em
+///////////////Styles for Services///////////////
+#Services
+	background-color: #74fdf9
+.service
+	margin-bottom: 30px
+	padding-top: 50px
+	text-align: center
+	display: block
+	width: 100%
+	min-height: 200px
+	background-color: white
+	transition: all 0.6s ease
+	svg
+		display: block
+		margin: 0 auto
+		path
+			transition: 0.6s ease
+	h4
+		margin: 35px 0
+		transition: all 0.6s ease
+		font-size: 1.25em
+		font-weight: 600
+		line-height: 1.375em
+	p
+		transition: all 0.6s ease
+		font-size: 1em
+		line-height: 1.55em
+	button
+		margin: 40px 0
+		color: $main
+		border: 3px solid $main
+	&:hover
+		background-color: $green
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35)
+		h4
+			color: white
+		p
+			color: white
+		button
+			color: white
+			border: 3px solid white
+///////////////Styles for Works///////////////
+#Works
+	.worksNav
+		margin-bottom: 110px
+		ul
+			list-style: none
+			li
+				margin-right: 15px
+				display: inline-block
+				button
+					margin-bottom: 10px
+					border: 2px solid $green
+					color: $main
+					&:hover
+						color: white
+	.work
+		position: relative
+		height: auto
+		width: 100%
+		margin-bottom: 30px
+		background-color: black
+		.workPhoto
+			transition: 1.5s ease
+			img
+				width: 100%
+		.workInfo
+			display: none
+			position: absolute
+			top: 37%
+			left: 35%
+			text-align: center
+			line-height: 1.375em
+			color: white
+			h4
+				font-size: 1.25em
+				font-weight: 600
+			p
+				font-size: 1em
+				font-weight: 600
+		&:hover
+			.workPhoto
+				opacity: 0.3
+			.workInfo
+				display: block
+#view
+	margin-top: 120px
+	background-color: $green
+	border: 2px solid $green
+	&:hover
+		background-color: #06b9a7
+		border: 2px solid #06b9a7
+////////////Styles for Pricing///////////////
+#Pricing
+	background-color: #f0f1f1
+.order
+	text-align: center
+	padding: 45px 0
+	width: 100%
+	background: white url('../img/Pricing/TopLine.svg') center top no-repeat
+	h4
+		color: white
+		font-size: 1.5625em
+		font-weight: 400
+		line-height: 1.375em
+	.priceOfOrder
+		color: white
+		line-height: 1.375em
+		font-weight: 400
+		p
+			font-size: 1em
+			margin: 35px 0
+			sup
+				font-size: 1.5625em
+			i
+				font-style: normal
+				font-size: 3.125em
+	.infoOfOrder
+		margin: 70px 0
+		p
+			display: block
+			width: 40%
+			margin-left: 30%
+			border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+	button
+		font-weight: 600
+		color: $main
+		border: 2px solid black
+		&:hover
+			color: white
+			border: 2px solid $green
+////////////////Styles for Our Team Member/////////////////
+#carouselForOurTeam
+	ol
+		z-index: 3
+		li
+			width: 15px
+			height: 15px
+			border-radius: 50%
+			background-color: $green
+			cursor: pointer
+			transition: 0.6s ease
+			&.active
+				background-color: #3949ab
+			&:hover
+				background-color: #3949ab
+.member
+	margin-bottom: 80px
+	.memberPhoto
+		margin-bottom: 35px
+		img
+			width: 100%
+	h4
+		font-size: 1.25em
+		font-weight: 600
+		line-height: 1.375em
+	h6
+		margin: 10px 0 25px 0
+	.carousel-item-socialButtons
+		span
+			width: 50px
+			height: 50px
+			background-color: #f0f1f1
+			border-radius: 10px
+			display: inline-block
+			padding: 10px 0
+			margin: 0 12.5px
+			transition: 1s ease
+			cursor: pointer
+			svg
+				margin: 0 auto
+				width: 100%
+			&:hover
+				background-color: #3949ab
+/////////////Styles for Blog////////////////
+#Blog
+	background-color: #aafdf9
+	button
+		margin-top: 120px
+		background-color: $green
+		border: 2px solid $green
+		&:hover
+			background-color: #06b9a7
+			border: 2px solid #06b9a7
+	.postPhoto
+		img
+			display: block
+			border-radius: 30px
+			width: 100%
+	.postInfo
+		h4
+			margin: 60px 0 30px 0
+			color: $green
+			font-size: 1.5625em
+			font-weight: 600
+			line-height: 1.375em
+		.date, .theme
+			display: inline-block
+			img
+				display: inline-block
+				width: 20px
+				height: 20px
+			p
+				display: inline-block
+				font-size: 1em
+				font-weight: 600
+				line-height: 1.375em
+		.date
+			margin-right: 30px
+	.textOfPost
+		width: 75%
+		text-align: justify
+//////////////Styles for Contact//////////////////	
+#Contact
+	background: url("../img/Contact/BGcontact.jpg") center top no-repeat / cover
+	color: white
+	position: relative
+	.contactDarkTheme
+		background-color: $main
+		opacity: .9
+		position: absolute
+		top: 0
+		left: 0
+		height: 100%
+		width: 100%
+	.iconFeedBack
+		margin: 0 auto
+		background-color: #3949ab
+		border-radius: 50%
+		width: 107px
+		height: 107px
+		display: flex
+		justify-content: center
+		align-items: center
+	h5
+		margin: 30px 0 60px 0
+		width: 80%
+		margin-left: 10%
+		font-size: 1.25em
+		font-weight: 590
+		line-height: 1.5em
+	form
+		input[type=text], textarea
+			width: 100%
+			border-radius: 10px
+			padding: 15px
+			margin-bottom: 30px
+			font-size: 1.25em
+			font-weight: 500
+			line-height: 1.75em
+			transition: 0.6s ease
+			&:hover, &:focus
+				box-shadow: 0 0 25px rgba(255, 255, 255, 0.35)
+			&:focus
+				border: 1px solid rgba(0, 0, 0, .9)
+		input[type=submit]
+			width: 220px
+			height: 70px
+			background-color: white
+			border-radius: 10px
+			font-family: $btn-font
+			font-size: 1.25em
+			line-height: 1.375em
+			text-transform: uppercase
+			transition: 0.6s ease
+			&:hover
+				cursor: pointer
+				background-color: rgba(0, 0, 0, .8)
+				color: $green
+/////////////Styles for footer////////////
+footer
+	p
+		margin: 0
+		padding-top: 15px
+		font-family: $btn-font
+		font-size: 1.25em
+		font-weight: 700
+		line-height: 1.375em
+		
+
+@import "media" // Always at the end
